@@ -14,7 +14,7 @@ public class Controller {
     {
         return "Hello Admin";
     }
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasAnyRole('USER','ADMIN')")
     @GetMapping("/user")
     public String userPage()
     {
@@ -25,5 +25,10 @@ public class Controller {
     public String homePage()
     {
         return "Home Page";
+    }
+    @GetMapping("/products")
+    public String getProducts()
+    {
+        return "Product List";
     }
 }
