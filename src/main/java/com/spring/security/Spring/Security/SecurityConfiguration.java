@@ -26,9 +26,7 @@ import java.util.List;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
-@EnableWebSecurity
-@EnableMethodSecurity
-@Configuration
+
 public class SecurityConfiguration  {
     @Autowired
     DataSource dataSource;
